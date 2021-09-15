@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jack Crowder</title>
+
+    <style type="text/css">
+
+        html
+        {
+            background-color:#b3cccc;
+        }
+
+        #header
+        {
+            text-align:center;
+
+            width:1000px;
+            margin:auto;
+            background-color: azure;
+            padding-top: 5px;
+
+        }
+        #Sales
+        {
+            height: 100px;
+            width:1000px;
+            margin:auto;
+            background-color: azure;
+
+            padding-bottom:5px;
+            padding-top:100px;
+
+        }
+
+
+
+        .menu
+        {
+            color:black;
+            text-decoration: none;
+            padding:4px;
+            margin:10px;
+            border:1px solid blue;
+        }
+        .menu:hover
+        {
+            background-color:deepskyblue;
+        }
+        .name
+        {
+            border-bottom:4px solid dodgerblue;
+        }
+        #Outcome
+        {
+            height: 100px;
+            width:1000px;
+            margin:auto;
+            background-color: azure;
+            padding-top:200px;
+        }
+        #T-Shirt
+        {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        img {float:right;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="header">
+    <h1 class="name">Jack Crowder</h1>
+    <div id="menu">
+        <a href="http://jackc3.sgedu.site/" class="menu">Main</a>
+        <a href="" class="menu">About Me</a>
+        <a href="" class="menu">Training</a>
+        <a href="" class="menu">Contact</a>
+
+
+
+
+
+
+
+    </div>
+</div>
+
+<div id="Sales">
+    <p>
+        Size:
+    </p>
+
+
+    <form>
+        <select id="Size">
+            <option value="10.00">Small</option>
+            <option value="10.00">Medium</option>
+            <option value="10.00">Large</option>
+            <option value="12.00">X-large 2$ extra</option>
+        </select>
+    </form>
+    <p>
+        Color:
+    </p>
+    <img id="T-Shirt" src="T-shirt.jpg" alt="T-shirt icon" width="208" height="199">
+    <form>
+        <select id="Color">
+            <option>Red T-shirt</option>
+            <option>Blue T-shirt</option>
+            <option>Green T-shirt</option>
+            <option>Orange T-shirt</option>
+        </select>
+    </form>
+    <p>
+        Quantity:
+    </p>
+    <input  type="text" size="10" id="Quantity"/>
+
+
+</div>
+<div id="Outcome">
+    <output type="text" size="10" id="FinishedOrder"/>
+
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+    var A = document.getElementById("Quantity")
+    var B = document.getElementById("Color")
+    var C = document.getElementById("Size")
+    var D = document.getElementById("FinishedOrder")
+
+    function OrderForm()
+    {
+
+        var result ="$" +  parseInt(A.value) * parseInt(C.value) +" for " + A.value + " " + B.value;
+        D.value = result;
+
+
+
+
+    }
+
+
+
+    A.addEventListener("keyup",OrderForm);
+    B.addEventListener("keyup",OrderForm);
+    C.addEventListener("keyup",OrderForm);
+
+
+</script>
+</body>
+</html>
